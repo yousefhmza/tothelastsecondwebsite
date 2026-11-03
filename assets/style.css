@@ -1,0 +1,77 @@
+/* To the Last Second · the channel's website. Colours and faces from channel/brand/kit/brand.yaml. */
+@font-face { font-family: "Oswald"; src: url("fonts/Oswald-Variable.ttf") format("truetype"); font-weight: 200 700; font-display: swap; }
+@font-face { font-family: "Alexandria"; src: url("fonts/Alexandria-Variable.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+
+:root {
+  --midnight: #0C1624;
+  --navy: #17283E;
+  --amber: #F5A524;
+  --steel: #8EA3BA;
+  --bone: #F1EBDD;
+  --ink: #060B13;
+  --text: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--midnight); }
+body {
+  margin: 0;
+  background: var(--midnight);
+  color: var(--bone);
+  font: 17px/1.65 var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+main, header.site, footer.site { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+a { color: var(--bone); text-decoration-color: var(--amber); text-underline-offset: 3px; }
+a:hover { color: var(--amber); }
+
+header.site { padding-top: 56px; padding-bottom: 8px; text-align: center; }
+header.site a { text-decoration: none; }
+.mark { width: 84px; height: 84px; display: block; margin: 0 auto 18px; }
+header.small { padding-top: 32px; text-align: left; }
+header.small .lockup { display: inline-flex; align-items: center; gap: 12px; }
+header.small .mark { width: 40px; height: 40px; margin: 0; }
+
+.name-ar { font-family: "Alexandria", var(--text); font-weight: 800; font-size: clamp(36px, 8vw, 58px); line-height: 1.25; margin: 0; }
+.name-en { font-family: "Oswald", var(--text); font-weight: 600; letter-spacing: 0.16em; color: var(--steel); font-size: clamp(15px, 3.4vw, 21px); margin: 4px 0 0; }
+header.small .name-en { color: var(--bone); letter-spacing: 0.08em; font-size: 18px; margin: 0; }
+
+.hook { text-align: center; padding: 28px 0 8px; }
+.lead { font-family: "Oswald", var(--text); font-weight: 500; font-size: clamp(24px, 5vw, 34px); line-height: 1.25; margin: 0 0 6px; }
+.lead-ar { font-family: "Alexandria", var(--text); font-weight: 600; font-size: clamp(22px, 4.6vw, 30px); line-height: 1.5; margin: 0 0 22px; }
+.hook p.body { color: var(--steel); max-width: 560px; margin: 0 auto 26px; }
+.button {
+  display: inline-block; background: var(--amber); color: var(--ink); font-weight: 700; text-decoration: none;
+  padding: 12px 26px; border-radius: 999px; letter-spacing: 0.02em;
+}
+.button:hover { color: var(--ink); filter: brightness(1.08); }
+
+section { padding: 30px 0; border-top: 1px solid var(--navy); }
+.hook { border-top: 0; }
+h2 { font-family: "Oswald", var(--text); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 20px; margin: 0 0 14px; }
+h1.title { font-family: "Oswald", var(--text); font-weight: 600; letter-spacing: 0.04em; font-size: clamp(30px, 6vw, 40px); line-height: 1.2; margin: 28px 0 4px; }
+.date { color: var(--steel); margin: 0 0 8px; }
+h3 { font-size: 18px; margin: 26px 0 6px; }
+
+.accounts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.accounts .card { background: var(--navy); border-radius: 14px; padding: 16px 18px; }
+.accounts .card h3 { margin: 0 0 8px; font-size: 15px; color: var(--steel); font-weight: 600; letter-spacing: 0.04em; }
+.accounts ul { list-style: none; margin: 0; padding: 0; }
+.accounts li { margin: 4px 0; }
+.ar { font-family: "Alexandria", var(--text); }
+[dir="rtl"] { text-align: right; }
+
+.muted { color: var(--steel); }
+ul.plain { padding-left: 20px; }
+ul.plain li { margin: 6px 0; }
+
+footer.site { padding-top: 26px; padding-bottom: 48px; border-top: 1px solid var(--navy); color: var(--steel); font-size: 15px; margin-top: 20px; }
+footer.site a { color: var(--steel); }
+footer.site nav { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 8px; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .accounts { grid-template-columns: 1fr; }
+  header.site { padding-top: 40px; }
+}
